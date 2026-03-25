@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.footer-btn {
+    @apply px-5 py-2 rounded-full border border-white/30 
+    text-white tracking-wide backdrop-blur-md 
+    bg-white/10 hover:bg-white hover:text-black 
+    transition-all duration-300 ease-in-out;
+}
