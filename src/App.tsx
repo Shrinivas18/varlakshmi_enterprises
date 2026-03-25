@@ -4,8 +4,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
+
+      {/* Page Content (empty for now) */}
+      <main className="flex-grow">
+        {/* your content will go here */}
+      </main>
+
       <Footer />
     </div>
   );
