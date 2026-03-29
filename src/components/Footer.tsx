@@ -1,20 +1,16 @@
 function Footer() {
   return (
     <footer className="w-full">
-      {/* IMAGE SECTION (no cropping) */}
       <div
         className="relative w-full bg-contain bg-no-repeat bg-center"
         style={{
           backgroundImage: "url('/footer.png')",
         }}
       >
-        {/* Responsive height instead of aspect ratio */}
         <div className="w-full h-[220px] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* CONTENT */}
         <div className="absolute inset-0 flex flex-col items-center justify-center -translate-y-4 sm:-translate-y-6 text-white text-center px-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/90">
             Stay Connected
