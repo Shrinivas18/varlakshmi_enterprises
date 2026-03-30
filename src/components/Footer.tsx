@@ -1,40 +1,49 @@
+import React from "react";
+import DialogBox from "./Dialog";
+
 function Footer() {
+  const [open, setOpen] = React.useState(false);
+  const [type, setType] = React.useState<"contact" | "social" | "licensing" | "">("");
+
+  const handleOpen = (t: "contact" | "social" | "licensing") => {
+    setType(t);
+    setOpen(true);
+  };
+
   return (
-    <footer className="w-full">
-      <div
-        className="relative w-full bg-contain bg-no-repeat bg-center"
-        style={{
-          backgroundImage: "url('/footer.png')",
-        }}
-      >
-        <div className="w-full h-[220px] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
+    <footer className="w-full bg-gradient-to-b from-black/80 to-black/60 backdrop-blur-md text-white border-t border-white/10">
+      <div className="max-w-6xl mx-auto py-8 sm:py-10 md:py-12 flex flex-col items-center text-center px-4">
 
-        <div className="absolute inset-0 bg-black/50"></div>
+        <h2 className="text-xl sm:text-2xl md:text-3xl text-white/80">
+          Stay Connected
+        </h2>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center -translate-y-4 sm:-translate-y-6 text-white text-center px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/90">
-            Stay Connected
-          </h2>
-
-          <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-5 mt-2">
-            <button className="px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white hover:text-black transition">
-              Contact
-            </button>
-
-            <button className="px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white hover:text-black transition">
-              Social
-            </button>
-
-            <button className="px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white hover:text-black transition">
-              Licensing
-            </button>
-          </div>
-
-          <p className="absolute bottom-4 text-xs sm:text-sm text-gray-200">
-            © 2020 Varlakshmi Enterprises
-          </p>
+        {/* Buttons */}
+        <div className="flex gap-3 sm:gap-5 mt-5 overflow-x-auto no-scrollbar">
+          <button className="footer-btn" onClick={() => handleOpen("contact")}>
+            Contact
+          </button>
+          <button className="footer-btn" onClick={() => handleOpen("social")}>
+            Social
+          </button>
+          <button className="footer-btn" onClick={() => handleOpen("licensing")}>
+            Licensing
+          </button>
         </div>
+
+        <h2 className="brand-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-6">
+          VARLAKSHMI ENTERPRISES
+        </h2>
+
+        <div className="w-20 h-[1px] bg-cyan-400/40 mt-4"></div>
+
+        <p className="mt-4 text-sm sm:text-base text-gray-400">
+          © 2020 Varlakshmi Enterprises
+        </p>
+
       </div>
+
+      <DialogBox open={open} onClose={() => setOpen(false)} type={type} />
     </footer>
   );
 }

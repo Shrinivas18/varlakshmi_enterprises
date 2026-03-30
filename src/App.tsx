@@ -1,15 +1,22 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+
+// Pages
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      {/* Page Content (empty for now) */}
-      <main className="flex-grow">
-        {/* your content will go here */}
+      <main className="grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Routes>
       </main>
 
       <Footer />
