@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
 .footer-btn {
-    @apply px-5 py-2 rounded-full border border-white/30 
-    text-white tracking-wide backdrop-blur-md 
-    bg-white/10 hover:bg-white hover:text-black 
-    transition-all duration-300 ease-in-out;
+  @apply px-4 py-2.5 sm:px-5 sm:py-2
+  rounded-full bg-white/5 border border-white/20 
+  backdrop-blur-md text-white 
+  text-sm sm:text-base md:text-lg
+  whitespace-nowrap
+  hover:bg-cyan-400 hover:text-black
+  transition-all duration-300 ease-in-out;
+}
+
+.brand-font {
+  font-family: "Grenze", serif;
+  font-weight: 500;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+* {
+  scroll-behavior: smooth;
 }
