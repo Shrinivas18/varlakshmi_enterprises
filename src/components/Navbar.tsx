@@ -1,10 +1,8 @@
 import * as React from "react";
-import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
+import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
 import HomeIcon from "@mui/icons-material/Home";
-
-const pages = [{ name: "Home", path: "/" }];
 
 function NavBar() {
   return (
@@ -12,61 +10,57 @@ function NavBar() {
       position="sticky"
       elevation={0}
       sx={{
-        background: "#0b0b0b", // solid classic black
+        background: "#0b0b0b",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <Container maxWidth="lg">
-        <Toolbar
+      <Toolbar
+        sx={{
+          justifyContent: "space-between",
+          px: 3,
+          minHeight: { xs: 64, md: 72 },
+        }}
+      >
+        {/* LOGO */}
+        <Box
+          component={Link}
+          to="/"
           sx={{
-            justifyContent: "space-between",
-            minHeight: { xs: 64, md: 72 },
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          <Box
-            component={Link}
-            to="/"
-            sx={{
-              display: "flex",
-              alignItems: "center",
+          <img
+            src={logo}
+            alt="Varlakshmi Logo"
+            style={{
+              height: "50px",
+              width: "auto",
+              objectFit: "contain",
             }}
-          >
-            <img
-              src={logo}
-              alt="Varlakshmi Logo"
-              style={{
-                height: "50px",
-                width: "auto",
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          />
+        </Box>
 
-          {/* 🖥️ NAV ITEMS */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            {pages.map((page) => (
-              <Button
-                component={Link}
-                to="/"
-                sx={{
-                  minWidth: "auto",
-                  color: "#e5e5e5",
-                  borderRadius: "6px",
-                  p: 1,
-                  transition: "all 0.25s ease",
+        {/* HOME ICON */}
+        <Button
+          component={Link}
+          to="/"
+          sx={{
+            minWidth: "auto",
+            color: "#e5e5e5",
+            borderRadius: "6px",
+            p: 1,
+            transition: "all 0.25s ease",
 
-                  "&:hover": {
-                    color: "#ffffff",
-                    backgroundColor: "rgba(255,255,255,0.08)",
-                  },
-                }}
-              >
-                <HomeIcon fontSize="medium" />
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
+            "&:hover": {
+              color: "#ffffff",
+              backgroundColor: "rgba(255,255,255,0.08)",
+            },
+          }}
+        >
+          <HomeIcon fontSize="medium" />
+        </Button>
+      </Toolbar>
     </AppBar>
   );
 }
