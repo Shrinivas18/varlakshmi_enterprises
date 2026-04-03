@@ -21,7 +21,6 @@ function NavBar() {
           minHeight: { xs: 64, md: 72 },
         }}
       >
-        {/* LOGO */}
         <Box
           component={Link}
           to="/"
@@ -41,7 +40,6 @@ function NavBar() {
           />
         </Box>
 
-        {/* HOME ICON */}
         <Button
           component={Link}
           to="/"
