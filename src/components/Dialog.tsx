@@ -16,42 +16,64 @@ type Props = {
 };
 
 const data = {
+  contact: {
+    title: "Contact Us",
+    content: (
+      <>
+        <Typography>
+          📞{" "}
+          <a href="tel:+919876543210" style={{ color: "#00e5ff" }}>
+            +91 92721 13100
+          </a>
+        </Typography>
 
-contact: {
-  title: "Contact Us",
-  content: (
-    <>
-      <Typography>
-        📞 <a href="tel:+919876543210" style={{ color: "#00e5ff" }}>
-          +91 92721 13100
-        </a>
-      </Typography>
+        <Typography sx={{ mt: 1 }}>
+          📧{" "}
+          <a href="mailto:your@email.com" style={{ color: "#00e5ff" }}>
+            your@email.com
+          </a>
+        </Typography>
 
-      <Typography sx={{ mt: 1 }}>
-        📧 <a href="mailto:your@email.com" style={{ color: "#00e5ff" }}>
-          your@email.com
-        </a>
-      </Typography>
-
-      <Typography sx={{ mt: 1 }}>
-        📱 <a
-          href="https://wa.me/919272113100"
-          target="_blank"
-          style={{ color: "#00e5ff" }}
-        >
-          WhatsApp Chat
-        </a>
-      </Typography>
-    </>
-  ),
-},
+        <Typography sx={{ mt: 1 }}>
+          📱{" "}
+          <a
+            href="https://wa.me/919272113100"
+            target="_blank"
+            style={{ color: "#00e5ff" }}
+          >
+            WhatsApp Chat
+          </a>
+        </Typography>
+      </>
+    ),
+  },
   social: {
     title: "Social Links",
     content: (
       <>
-        <Typography>📱 WhatsApp</Typography>
-        <Typography sx={{ mt: 1 }}>📸 Instagram</Typography>
-        <Typography sx={{ mt: 1 }}>📘 Facebook</Typography>
+        {/* <Typography>📱 WhatsApp</Typography> */}
+        <Typography
+          sx={{
+            mt: 1,
+            cursor: "pointer",
+            "&:hover": {
+              cursor: "pointer",
+            },
+          }}
+        >
+          📸 Instagram
+        </Typography>
+        <Typography
+          sx={{
+            mt: 1,
+            cursor: "pointer",
+            "&:hover": {
+              cursor: "pointer",
+            },
+          }}
+        >
+          📘 Facebook
+        </Typography>
       </>
     ),
   },

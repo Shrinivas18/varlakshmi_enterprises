@@ -20,13 +20,13 @@ function Footer() {
 
         {/* Buttons */}
         <div className="flex gap-3 sm:gap-5 mt-5 overflow-x-auto no-scrollbar">
-          <button className="footer-btn" onClick={() => handleOpen("contact")}>
+          <button className="footer-btn" style={{cursor:"pointer"}} onClick={() => handleOpen("contact")}>
             Contact
           </button>
-          <button className="footer-btn" onClick={() => handleOpen("social")}>
+          <button className="footer-btn" style={{cursor:"pointer"}} onClick={() => handleOpen("social")}>
             Social
           </button>
-          <button className="footer-btn" onClick={() => handleOpen("licensing")}>
+          <button className="footer-btn" style={{cursor:"pointer"}} onClick={() => handleOpen("licensing")}>
             Licensing
           </button>
         </div>
