@@ -16,7 +16,6 @@ type Props = {
 };
 
 const data = {
- // ONLY replace contact section inside your existing file
 
 contact: {
   title: "Contact Us",
@@ -24,7 +23,7 @@ contact: {
     <>
       <Typography>
         📞 <a href="tel:+919876543210" style={{ color: "#00e5ff" }}>
-          +91 98765 43210
+          +91 92721 13100
         </a>
       </Typography>
 
@@ -36,7 +35,7 @@ contact: {
 
       <Typography sx={{ mt: 1 }}>
         📱 <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919272113100"
           target="_blank"
           style={{ color: "#00e5ff" }}
         >
