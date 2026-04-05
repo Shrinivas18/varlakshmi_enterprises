@@ -32,7 +32,7 @@ function Footer() {
         </div>
 
         <h2 className="brand-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-6">
-          VARLAKSHMI ENTERPRISES
+          VARLAXMI ENTERPRISES
         </h2>
 
         <div className="w-20 h-[1px] bg-cyan-400/40 mt-4"></div>
