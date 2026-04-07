@@ -18,7 +18,6 @@ function Footer() {
           Stay Connected
         </h2>
 
-        {/* Buttons */}
         <div className="flex gap-3 sm:gap-5 mt-5 overflow-x-auto no-scrollbar">
           <button className="footer-btn" style={{cursor:"pointer"}} onClick={() => handleOpen("contact")}>
             Contact
