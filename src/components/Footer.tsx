@@ -36,7 +36,7 @@ function Footer() {
 
         <div className="w-20 h-[1px] bg-cyan-400/40 mt-4"></div>
 
-        <p className="mt-4 text-sm sm:text-base text-gray-400">
+        <p className="mt-4 text-sm sm:text-base text-gray-300">
           © 2020 Varlaxmi Enterprises
         </p>
 
